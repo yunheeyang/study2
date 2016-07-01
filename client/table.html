@@ -1,0 +1,30 @@
+<template name="table">
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+    <tr>
+        <td>이름</td>
+        <td>전화번호</td>
+        <td>이메일</td>
+        <td>코딩취향</td>
+        <td>프로젝트 내용</td>
+    </tr>
+    </thead>
+
+    <tbody>
+        {{#each boards}}
+        <tr dataId="{{_id}}" data-toggle="modal" data-target="#myModal">
+            <td hidden>{{_id}}</td>
+            <td>{{inName}}</td>
+            <td>{{inNumber}}</td>
+            <td>{{inEmail}}</td>
+            <td>{{ck}}</td>
+            <td>{{pj}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
+
+</template>
